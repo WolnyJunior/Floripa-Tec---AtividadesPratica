@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floripa + Tec</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Semana 2 - Atividade Prática 3</h1>
+
+    <div class="meusBotoes">
+        <div class="semana">
+            <h2>Semana 2</h2>
+            <a href="../Semana 2 - 1/index.html"><button>Atividade 1</button></a>
+            <a href="../Semana 2 - 2/index.html"><button>Atividade 2</button></a>
+        </div>
+        <div class="semana">
+            <h2>Semana 3</h2>
+            <a href="../Semana 3 - 1/index.html"><button>Atividade 1</button></a>
+            <a href="../Semana 3 - 2/index.html"><button>Atividade 2</button></a>
+            <a href="../Semana 3 - 3/index.html"><button>Atividade 3</button></a>
+            <a href="../Semana 3 - 4/index.html"><button>Atividade 4</button></a>
+
+        </div>
+    </div>
+
+
+    <div id="resultado">
+    </div>
+
+    <script>
+        let a = Number(prompt('Digite um número entre 0 e 20'));
+        let b = Number(prompt('Digite outro número entre 0 e 20'));;
+
+        let operacao = prompt('Digite a operação desejada: \n Soma (+) \n Subtração (-) \n Multiplicação (*) \n Divisão (/) \n Exponenciação (#) \n Resto (%)')
+
+        let soma = a + b;
+        let sub = a - b;
+        let mult = a * b;
+        let div = a / b;
+        let exp = a ** b;
+        let res = a % b;
+
+        switch (operacao) {
+            case '+':
+                alert(`Soma de ${a} e ${b} = ` + soma);
+                console.log(`Soma de ${a} e ${b} = `, soma);
+                document.getElementById('resultado').innerHTML = soma;
+                break
+            case '-':
+                alert(`Subtração de ${a} por ${b} = ` + sub);
+                console.log(`Subtração de ${a} por ${b} = `, sub);
+                document.getElementById('resultado').innerHTML = sub;
+                break
+            case '*':
+                alert(`Multiplicação entre os valores ${a} e ${b} = ` + mult);
+                console.log(`Multiplicação entre os valores ${a} e ${b} = `, mult);
+                document.getElementById('resultado').innerHTML = mult;
+                break
+            case '/':
+                alert(`Divisão entre os valores ${a} e ${b} = ` + div);
+                console.log(`Divisão entre os valores ${a} e ${b} = `, div);
+                document.getElementById('resultado').innerHTML = div;
+                break
+            case '#':
+                alert(`Exponenciação entre os algarismos ${a} e ${b} = ` + exp);
+                console.log(`Exponenciação entre os algarismos ${a} e ${b} = `, exp);
+                document.getElementById('resultado').innerHTML = exp;
+                break
+            case '%':
+                alert(`Resto da divisão ${a}/${b} = ` + res);
+                console.log(`Resto da divisão ${a}/${b} = `, res);
+                document.getElementById('resultado').innerHTML = res;
+                break
+
+            default:
+                alert('Operação Inválida')
+                console.log('Operação Inválida')
+                document.getElementById('resultado').innerHTML = 'Operação Inválida';
+        }
+
+    </script>
+
+</body>
+
+</html>

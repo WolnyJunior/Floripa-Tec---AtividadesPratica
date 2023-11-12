@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #faf9f6;
+}
+
+.meusBotoes{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.semana{
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, .5);
+    margin: 10px ;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+}
+
+.calc {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.calculadora {
+    width: 640px;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ece7dd;
+    background: #ffffff;
+    box-shadow: 2px 5px 6px rgba(0, 0, 0, .5);
+}
+
+.calculadora input,
+select {
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background: rgba(0, 0, 0, .1);
+    transition: all .8s;
+}
+
+.meu-hover:hover{
+    background: rgba(0, 0, 0, .7);
+    color: #faf9f6;
+}
+
+button {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+    padding: 10px;
+    background: rgb(12, 132, 124);
+    border: none;
+    cursor: pointer;
+    color: rgba(0, 0, 0, .5);
+    box-shadow: 2px 4px 5px black;
+    transition: all .2s;
+    border-radius: 8px;
+}
+
+@keyframes vibrar {
+    0% {
+        transform: rotateZ(1deg);
+    }
+
+    20% {
+        transform: rotateZ(-1deg);
+    }
+
+    40% {
+        transform: rotateZ(1deg);
+    }
+
+    60% {
+        transform: rotateZ(-1deg);
+    }
+
+    80% {
+        transform: rotateZ(1deg);
+    }
+
+    100% {
+        transform: rotateZ(-1deg);
+    }
+}
+
+button:hover {
+    animation-name: vibrar;
+    animation-duration: .5s;
+    color: #c1c1c1;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+    /* background: rgb(3, 251, 235); */
+    color: rgba(0, 0, 0, .5);
+}
+
+#resultado {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}

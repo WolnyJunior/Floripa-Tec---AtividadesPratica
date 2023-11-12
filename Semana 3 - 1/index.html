@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floripa + Tec</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Semana 3 - Atividade Prática 1</h1>
+
+    <div class="meusBotoes">
+        <div class="semana">
+            <h2>Semana 2</h2>
+            <a href="../Semana 2 - 1/index.html"><button>Atividade 1</button></a>
+            <a href="../Semana 2 - 2/index.html"><button>Atividade 2</button></a>
+            <a href="../Semana 2 - 3/index.html"><button>Atividade 3</button></a>
+        </div>
+        <div class="semana">
+            <h2>Semana 3</h2>
+            <a href="../Semana 3 - 2/index.html"><button>Atividade 2</button></a>
+            <a href="../Semana 3 - 3/index.html"><button>Atividade 3</button></a>
+            <a href="../Semana 3 - 4/index.html"><button>Atividade 4</button></a>
+
+        </div>
+    </div>
+
+    <div class="div1">
+        <h1 class="calc">Carculadera</h1>
+        <div class="calculadora">
+            <form id="form1">
+                <input class="meu-hover" id="x" type="number" required min="1" max="99">
+                <input class="meu-hover" id="y" type="number" required min="1" max="99">
+                <select class="meu-hover" name="operacao" id="op" required>
+                    <option id="soma" value="+">+</option>
+                    <option id="sub" value="-">-</option>
+                    <option id="multi" value="*">*</option>
+                    <option id="div" value="/">/</option>
+                    <option id="exp" value="#">**</option>
+                    <option id="res" value="%">%</option>
+                </select>
+                <button>Calcular</button>
+            </form>
+            <p>O Resultado é: <span id="resultado"></span></p>
+        </div>
+    </div>
+
+    <script>
+        let form = document.querySelector('#form1')
+
+        let x = document.querySelector('#x')
+        let y = document.querySelector('#y')
+        let select = document.querySelector('#op');//capturar select - option
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault()
+            const valor1 = Number(x.value)
+            const valor2 = Number(y.value)
+
+            let soma = valor1 + valor2;
+            let sub = (valor1 - valor2);
+            let multi = valor1 * valor2;
+            let div = valor1 / valor2;
+            let exp = valor1 ** valor2;
+            let res = valor1 % valor2;
+
+            let operacao = select.options[select.selectedIndex].value //capturar select - option
+
+            switch (operacao) {
+                case '+':
+                    console.log(`A soma dos valores ${valor1} e ${valor2} é = ` + soma)
+                    document.getElementById('resultado').innerHTML = soma
+                    break
+                case '-':
+                    console.log(`A subtração dos valores ${valor1} e ${valor2} é = ` + sub)
+                    document.getElementById('resultado').innerHTML = sub
+                    break
+                case '*':
+                    console.log(`A multiplicação dos valores ${valor1} e ${valor2} é = ` + multi)
+                    document.getElementById('resultado').innerHTML = multi
+                    break
+                case '/':
+                    console.log(`A divisão dos valores ${valor1} e ${valor2} é = ` + div)
+                    document.getElementById('resultado').innerHTML = div
+                    break
+                case '#':
+                    console.log(`A exponenciação dos valores ${valor1} e ${valor2} é = ` + exp)
+                    document.getElementById('resultado').innerHTML = exp
+                    break
+                case '%':
+                    console.log(`O resto da divisão dos valores ${valor1} e ${valor2} é = ` + res)
+                    document.getElementById('resultado').innerHTML = res
+                    break
+                default:
+                    console.log('Operação inválida')
+                    document.getElementById('resultado').innerHTML = "Inválido"
+            }
+        })
+    </script>
+</body>
+
+</html>

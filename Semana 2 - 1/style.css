@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 80%;
+    margin: 40px auto;
+}
+
+h1,
+p {
+    text-align: center;
+}
+
+.meusBotoes{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.semana{
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, .5);
+    margin: 10px ;
+    padding: 20px;
+}
+
+p,
+ol {
+    font-size: 24px;
+    margin: 30px 0;
+}
+
+ol li {
+    line-height: 35px;
+    transition: all .5s;
+    cursor: context-menu;
+}
+
+ol li:hover {
+    background: #c1c1c1;
+    color: blueviolet;
+}
+
+span {
+    font-weight: bolder;
+}
+
+.calc {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.calculadora {
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    width: 500px;
+}
+
+.calculadora input,
+select {
+    text-align: center;
+    font-size: 35px;
+    width: 100px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+button {
+    font-size: 28px;
+    margin: 10px;
+    padding: 10px;
+    background: rgb(12, 132, 124);
+    border: none;
+    cursor: pointer;
+    color: rgba(0, 0, 0, .5);
+    box-shadow: 2px 4px 5px black;
+    transition: all .2s;
+    border-radius: 8px;
+}
+
+@keyframes vibrar {
+    0% {
+        transform: rotateZ(1deg);
+    }
+
+    20% {
+        transform: rotateZ(-1deg);
+    }
+
+    40% {
+        transform: rotateZ(1deg);
+    }
+
+    60% {
+        transform: rotateZ(-1deg);
+    }
+
+    80% {
+        transform: rotateZ(1deg);
+    }
+
+    100% {
+        transform: rotateZ(-1deg);
+    }
+}
+
+button:hover {
+    animation-name: vibrar;
+    animation-duration: .5s;
+    color: #c1c1c1;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+    background: rgb(3, 251, 235);
+    color: rgba(0, 0, 0, .5);
+}
+
+#resultado {
+    font-size: 35px;
+    font-weight: 100;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}

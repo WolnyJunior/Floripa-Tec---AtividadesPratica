@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floripa + Tec</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Semana 2 - Atividade Prática 1</h1>
+
+    <div class="meusBotoes">
+        <div class="semana">
+            <h2>Semana 2</h2>
+            <a href="../Semana 2 - 2/index.html"><button>Atividade 2</button></a>
+            <a href="../Semana 2 - 3/index.html"><button>Atividade 3</button></a>
+        </div>
+        <div class="semana">
+            <h2>Semana 3</h2>
+            <a href="../Semana 3 - 1/index.html"><button>Atividade 1</button></a>
+            <a href="../Semana 3 - 2/index.html"><button>Atividade 2</button></a>
+            <a href="../Semana 3 - 3/index.html"><button>Atividade 3</button></a>
+            <a href="../Semana 3 - 4/index.html"><button>Atividade 4</button></a>
+
+        </div>
+    </div>
+    <p>
+        Vamos começar o desenvolvimento de uma calculadora para aplicar o conhecimento adquirido durante o curso.
+        Crie um documento HTML com a seguinte estrutura:
+    </p>
+    <ol>
+        <li>Um título h1 com o nome da sua calculadora</li>
+        <li>Um pequeno parágrafo descrevendo seu projeto (use sua criatividade!)</li>
+        <li>Uma lista ordenada com o passo-a-passo para usar a sua calculadora</li>
+        <li>Dois elementos input do tipo número</li>
+        <li>Um elemento select com as opções sendo as principais operações matemáticas</li>
+        <li>Um botão para realizar o cálculo</li>
+        <li>Um parágrafo com os dizeres “O resultado da operação é:”. Posteriormente usaremos JavaScript para inserir o
+            valor neste parágrafo.</li>
+        <li><span>Obs. Não se preocupe com estilos e funcionalidades neste momento.</span></li>
+    </ol>
+
+    <h1 class="calc">Minha Calculadora</h1>
+    <p>Este é um pequeno projeto de uma calculadora que será desenvolvido para praticar os conhecimentos adquiridos nas
+        aulas assistidas no curso <span>Floripa + Tec</span> que estou participando.</p>
+
+    <h2>Instruções:</h2>
+    <ol>
+        <li>Digite o primeiro valor.</li>
+        <li>Digite o segundo valor.</li>
+        <li>Escolha a operação.</li>
+        <li>Calcule.</li>
+        <li>Resultado</li>
+    </ol>
+    <h1 class="calc">Carculadera</h1>
+    <div class="calculadora">
+
+        <div>
+            <input id="x" type="number" required min="1" max="99">
+            <input id="y" type="number" required min="1" max="99">
+            <select name="operacao" id="">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </div>
+        <button>Calcular</button>
+        <p>O Resultado é = <span id="resultado"></span></p>
+    </div>
+
+
+
+</body>
+
+</html>

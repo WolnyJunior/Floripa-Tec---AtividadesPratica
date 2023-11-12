@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floripa + Tec</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Semana 3 - Atividade Prática 3</h1>
+
+    <div class="meusBotoes">
+        <div class="semana">
+            <h2>Semana 2</h2>
+            <a href="../Semana 2 - 1/index.html"><button>Atividade 1</button></a>
+            <a href="../Semana 2 - 2/index.html"><button>Atividade 2</button></a>
+            <a href="../Semana 2 - 3/index.html"><button>Atividade 3</button></a>
+        </div>
+        <div class="semana">
+            <h2>Semana 3</h2>
+            <a href="../Semana 3 - 1/index.html"><button>Atividade 1</button></a>
+            <a href="../Semana 3 - 2/index.html"><button>Atividade 2</button></a>
+            <a href="../Semana 3 - 4/index.html"><button>Atividade 4</button></a>
+
+        </div>
+    </div>
+
+
+    <p>Imaginando que, em um determinado sistema, exista um elemento HTML com a classe “title”, escreva a regra CSS
+        para que este elemento seja impresso com as seguintes características:</p>
+
+    <ol>
+        <li>Fonte 26px Arial</li>
+        <li>Cor da fonte #999999</li>
+        <li>Texto em uppercase</li>
+        <li>Texto centralizado</li>
+    </ol>
+
+        <form class="caixaDeTexto">
+            <input id="texto" type="text" class="title" placeholder="Digite sua mensagem">
+            <button type="submit">Imprimir</button>
+        </form>
+
+        <div id="textoFinal">
+
+        </div>
+
+        <script>
+
+            let boxText = document.querySelector('.caixaDeTexto')
+            let text = document.querySelector('#texto')
+
+            
+
+            boxText.addEventListener('submit', function(event){
+                
+                event.preventDefault()
+                const msg = texto.value
+                console.log(msg)
+                document.getElementById('textoFinal').innerHTML = msg
+            })
+
+           
+        </script>
+
+
+
+</body>
+
+</html>
